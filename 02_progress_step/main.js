@@ -12,7 +12,7 @@ const App = {
     <div class='container'>
         <div class="progress-container" :style="containerStyles">
             <div class="progress-bg"></div>
-            <div class="progress"></div>
+            <div class="progress" :style="progressBarStyles"></div>
             <ProgressCircle v-for="i in range(numberOfCircles)" 
             :key="i"
             :step="i"
@@ -59,6 +59,11 @@ const App = {
         containerStyles() {
             return {
                 width: this.numberOfCircles * 50 + 'px'
+            }
+        },
+        progressBarStyles() {
+            return {
+                width: (this.activeCircles - 1) / (this.numberOfCircles - 1) * 100 + '%'
             }
         }
     },
