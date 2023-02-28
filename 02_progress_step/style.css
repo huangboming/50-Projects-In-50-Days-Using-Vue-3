@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Muli', sans-serif;
+    /* centering everything */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+/* My code below */
+
+.container {
+    /* 文字和按钮居中 */
+    text-align: center;
+}
+
+/* 进度条盒子 */
+.progress-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 30px;
+    min-width: 350px;
+}
+
+.circle {
+    /* 要设置一个背景颜色，覆盖进度条 */
+    background-color: #fff;
+    /* 文字水平垂直居中 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    /* 圆形 */
+    border-radius: 50%;
+    border: 3px solid #DCDCDC;
+    color: #8E8E8E;
+    /* 边框颜色渐变 */
+    transition: border-color .4s ease;
+}
+
+/* 激活时变色 */
+.circle.active {
+    border-color: #3498db;
+}
+
+/* 横条 */
+/* 两条横条，一条作为底色，一条用于记录激活的进度 */
+
+.progress-bg {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background-color: #DCDCDC;
+    height: 4px;
+    width: 100%;
+    z-index: -1;
+}
+
+.progress {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background-color: #3498db;
+    height: 4px;
+    width: 0%;
+    z-index: -1;
+    /* 宽度渐变 */
+    transition: width .4s ease;
+}
+
+/* 按钮 */
+
+button {
+    width: 90px;
+    height: 32px;
+    border: 0;
+    border-radius: 5px;
+    margin: 0 5px;
+    color: #FEFEFE;
+    background-color: #DCDCDC;
+    cursor: pointer;
+}
+
+
+button#next {
+    background-color: #3498db;
+}
+
+button:disabled {
+    background-color: #DCDCDC;
+    cursor: not-allowed;
+}
+
+/* 根据视频查漏被缺 */
+
+
+/* 定义变量 */
+
+:root {
+    --line-border-fill: #3498db;
+    --line-border-empty: #DCDCDC;
+}
+
+/* 按钮动态大小 */
+
+button:active {
+    transform: scale(.98);
+}
