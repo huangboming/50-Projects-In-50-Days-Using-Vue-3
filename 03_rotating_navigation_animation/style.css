@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #2D2D2D;
+    margin: 0;
+
+}
+
+.container {
+    background-color: #fff;
+    position: relative;
+    padding: 50px;
+    /* 以左上角为变换原点 */
+    transform-origin: top left;
+    transition: transform .4s ease;
+}
+
+.container.active {
+    transform: rotate(-20deg);
+}
+
+/* 左上方的小半圆以及里面的按钮 */
+.circle-container {
+    position: fixed;
+    top: -100px;
+    left: -100px;
+    height: 200px;
+}
+
+.circle {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: #FF7979;
+    border-radius: 100px;
+}
+
+.circle button {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    border: 0;
+    background-color: transparent;
+    font-size: 26px;
+    color: #fff;
+    height: 100px;
+    cursor: pointer;
+    transform-origin: top left;
+    transition: transform .4s ease;
+}
+
+/* 按钮动态变化 */
+.circle button#close {
+    transform: rotate(90deg);
+}
+
+.circle button#open.active {
+    transform: rotate(-90deg);
+}
+
+.circle button#close.active {
+    transform: rotate(20deg);
+}
+
+
+/* 文章主体 */
+
+article {
+    max-width: 1000px;
+    line-height: 1.5rem;
+    margin: 50px auto;
+}
+
+article h1 {
+    font-size: 32px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+article small {
+    color: rgba(0, 0, 0, .8);
+    font-style: italic;
+}
+
+
+article img {
+    max-width: 100%;
+}
+
+/* navigation bar */
+
+nav ul {
+    position: fixed;
+    left: 0px;
+    bottom: 40px;
+    list-style: none;
+    color: #fff
+}
+
+nav ul li {
+    margin: 40px 0;
+    transition: transform .4s ease-in;
+    transform: translate(-100px, 0);
+}
+
+nav ul li:nth-of-type(1).active {
+    transform: translate(0, 0);
+}
+
+nav ul li:nth-of-type(2).active {
+    transform: translate(1em, 0);
+}
+
+nav ul li:nth-of-type(3).active {
+    transform: translate(2em, 0);
+}
