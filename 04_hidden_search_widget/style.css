@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Muli', sans-serif;
+    /* centering everything */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+/* my code below */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    background-color: #794BE5;
+}
+
+.container {
+    position: relative;
+    height: 50px;
+}
+
+.btn {
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 100%;
+    cursor: pointer;
+    transition: transform .4s ease-in;
+}
+
+#search-input {
+    width: 0px;
+    height: 100%;
+    padding-left: 10px;
+    font-size: 18px;
+    /* 表单轮廓线 */
+    outline: none;
+    transition: width .4s ease-in;
+}
+
+.container.active .btn {
+    transform: translateX(200px);
+}
+
+.container.active #search-input {
+    width: 200px;
+}
