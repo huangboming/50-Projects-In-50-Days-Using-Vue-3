@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:wght@400;700;900&display=swap');
+
+:root {
+    --body-bgc: #686DE0;
+    --button-bgc: #9F68E0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Muli', sans-serif;
+    /* centering everything */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    background-color: var(--body-bgc);
+}
+
+.container {
+    width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.container h3 {
+    margin: 0;
+    color: rgba(0, 0, 0, .5);
+    font-weight: 900;
+
+}
+
+.joke {
+    max-width: 600px;
+    margin: 50px auto;
+    font-size: 30px;
+    line-height: 40px;
+}
+
+.btn {
+    padding: 16px 40px;
+    border: 0;
+    outline: none;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    background-color: var(--button-bgc);
+    color: #fff;
+    font-size: 1rem;
+}
+
+.btn:active {
+    transform: scale(.98);
+}
