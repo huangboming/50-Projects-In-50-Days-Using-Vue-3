@@ -1,4 +1,4 @@
-const panel = {
+const Panel = {
     props: ['title', 'url'],
     template: `
     <div class="panel" :style="{ 'background-image': 'url(' + url + ')' }">
@@ -18,7 +18,7 @@ const App = {
         }
     },
     components: {
-        'panel': panel
+        Panel
     },
     methods: {
         range(num) {
@@ -30,7 +30,7 @@ const App = {
     },
     template: `
     <div class='container'>
-        <panel
+        <Panel
         v-for="index in range(panelUrls.length)"
         :class="{'active-panel': index === activePanel}" 
         @click="changeActivePanel(index)"
