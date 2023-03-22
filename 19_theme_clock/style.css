@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #000;
+    --secondary-color: #fff;
+}
+
+html {
+    transition: all .5s ease-in;
+}
+
+html.dark {
+    --primary-color: #fff;
+    --secondary-color: #333;
+}
+
+html.dark {
+    background-color: #111;
+    color: var(--primary-color);
+}
+
+body {
+    font-family: 'Muli', sans-serif;
+    /* centering everything */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.dark-mode-button {
+    background-color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: var(--secondary-color);
+    cursor: pointer;
+}
+
+.clock-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 100px 0 50px;
+}
+
+.needle {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 2px);
+    width: 3px;
+    background-color: var(--primary-color);
+    transform-origin: bottom center;
+    transition: transform 1s ease;
+}
+
+.hour {
+    top: 50%;
+    transform: translateY(-100%);
+    height: 50px;
+}
+
+.minute {
+    height: 100px;
+}
+
+.second {
+    height: 100px;
+    background-color: red;
+    z-index: 1;
+}
+
+.center-point {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: red;
+    z-index: 2;
+}
+
+.center-point::after {
+    content: '';
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    z-index: 3;
+}
+
+.time-container {
+    text-align: center;
+}
+
+.time {
+    margin: 0;
+    font-size: 50px;
+}
+
+.date {
+    color: grey;
+    text-transform: uppercase;
+}
+
+.date small {
+    display: inline-block;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    padding: 2px;
+    color: var(--secondary-color);
+}
