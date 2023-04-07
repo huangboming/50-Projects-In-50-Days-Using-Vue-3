@@ -29,7 +29,7 @@ const App = {
     <div id="toasts"
     class="fixed bottom-3 right-3 flex flex-col items-end"
     >
-    <Toast v-for="toast in toasts" :message="toast.message" :type="toast.type" />
+    <Toast v-for="toast, i in toasts" :key="i" :message="toast.message" :type="toast.type" />
     </div>
 
     <button 

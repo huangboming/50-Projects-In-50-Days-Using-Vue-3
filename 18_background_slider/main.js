@@ -17,6 +17,7 @@ const App = {
     <div class="slider-container">
         <Slide 
         v-for="imgUrl, i in imgUrls"
+        :key="i"
         :is-active="activeImgIdx === i" 
         :bgUrl="imgUrl" />
     

@@ -40,6 +40,7 @@ const App = {
     <h1>Frequently Asked Questions</h1>
     <div class="faq-container">
         <FaqBox v-for="question, i in questions" 
+        :key="i"
         :question="question"
         :answer="answers[i]"
         />

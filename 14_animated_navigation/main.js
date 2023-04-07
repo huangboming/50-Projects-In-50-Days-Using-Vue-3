@@ -2,7 +2,7 @@ const App = {
     template: `
     <nav :class="isActive? 'active' : '' ">
         <ul v-if="showUl">
-            <li v-for="content in navContents">
+            <li v-for="content, i in navContents" :key="content">
             <a href="#">{{ content }}</a>
             </li>
         </ul>

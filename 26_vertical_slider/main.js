@@ -9,6 +9,7 @@ const App = {
             <div 
             class="flex flex-col items-center justify-center w-full h-full text-white"
             v-for="color, i in leftBoxColors"
+            :key="i"
             :class="'bg-['+color+']'"
             >
                 <h1 class="text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl xl:pb-2">
@@ -25,6 +26,7 @@ const App = {
             <div 
             class="w-full h-full bg-no-repeat bg-cover bg-center"
             v-for="img, i in rightBoxBgImg"
+            :key="i"
             :class="'bg-[url(' + rightBoxBgImg[i] + ')]'"
             ></div>
         </div>

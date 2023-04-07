@@ -21,6 +21,7 @@ const App = {
     <div class="cups">
         <div class="cup cup-small" 
         v-for="i in range(numOfCups)" 
+        :key="i"
         @click="() => hightlightCups(i)"
         :class="i <= this.currentCupIdx ? 'full' : ''"
         >250 ml</div>

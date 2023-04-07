@@ -37,6 +37,7 @@ const App = {
     <div class="container">
         <Counter 
         v-for="faClass, i in platformFaClass"
+        :key="i"
         :fa-class="faClass"
         :data-target="dataTargets[i]"
         :small-title="smallTitles[i]"

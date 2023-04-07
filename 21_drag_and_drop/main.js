@@ -16,6 +16,7 @@ const App = {
     </div>
     <div class="empty" 
     v-for="i in [...Array(draggableNum-1).keys()]"
+    :key="i"
     @dragover.prevent="dragOver"
     @dragenter.prevent="dragEnter"
     @dragleave="dragLeave"

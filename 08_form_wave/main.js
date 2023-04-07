@@ -1,7 +1,7 @@
 const Wave = {
     template: `
         <label :for="contents">
-            <span v-for="char, i in contents" :style="{'transitionDelay': i * 50 + 'ms'}">
+            <span v-for="char, i in contents" :key="i" :style="{'transitionDelay': i * 50 + 'ms'}">
                 {{ char }}
             </span>
         </label >

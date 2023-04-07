@@ -15,6 +15,7 @@ const App = {
     template: `
     <div class="container">
         <AudioButton v-for="(path, idx) in audioPaths" 
+        :key="idx"
         :audioPath="path" 
         :audioTitle="audioTitles[idx]"
         @click="() => playCurrentSong(audioTitles[idx])"

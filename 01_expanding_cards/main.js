@@ -32,6 +32,7 @@ const App = {
     <div class='container'>
         <Panel
         v-for="index in range(panelUrls.length)"
+        :key="index"
         :class="{'active-panel': index === activePanel}" 
         @click="changeActivePanel(index)"
         :title="panelTitles[index]"

@@ -14,7 +14,7 @@ const App = {
         @keyup="(e) => handleEnter(e)"
         ></textarea>
         <div class="choices-container">
-            <span v-for="choice in splitChoices" class="choice" ref="choiceItem"> {{ choice }} </span>
+            <span v-for="choice,i in splitChoices" :key="i"  class="choice" ref="choiceItem"> {{ choice }} </span>
         </div>
     </div>
     `,

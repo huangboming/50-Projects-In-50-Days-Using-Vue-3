@@ -46,7 +46,7 @@ const App = {
 
     <main>
         <template v-if="haveMovie">
-            <MovieCard v-for="movie in movies" :movie="movie" />
+            <MovieCard v-for="movie,i in movies" :key="i" :movie="movie" />
         </template>
         <!-- if found nothing, show the below message -->
         <template v-else="haveMovie">

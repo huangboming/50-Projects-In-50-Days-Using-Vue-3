@@ -5,7 +5,7 @@ const App = {
             Press any key to get the keyCode
         </div>
         <template v-else>
-            <div class="key" v-for="key, i in keyArray">
+            <div class="key" v-for="key, i in keyArray" :key="i">
                 {{ computedKeyArray[i] }}
                 <small>{{ key }}</small>
             </div>
